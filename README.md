@@ -1,6 +1,6 @@
 # Vanilla Excavators
 
-Vanilla Excavators is an alternative to [Vanilla Excavators](https://github.com/Draylar/vanilla-excavators/)-- instead of mining stone, excavators dig dirt!
+Vanilla Excavators is an alternative to [Vanilla Hammers](https://github.com/Draylar/vanilla-hammers/)-- instead of mining stone, excavators dig dirt!
 
 ## Installation
 
