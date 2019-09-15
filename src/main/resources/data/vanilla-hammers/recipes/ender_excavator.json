@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " d ",
+    "DsD",
+    " s "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "d": {
+      "item": "minecraft:dragon_head"
+    },
+    "s": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "vanillaexcavators:ender_excavator"
+  }
+}

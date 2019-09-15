@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " d ",
+    "DsD",
+    " s "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:magma_block"
+    },
+    "d": {
+      "item": "minecraft:magma_cream"
+    },
+    "s": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "vanillaexcavators:fiery_excavator"
+  }
+}

@@ -1,31 +1,31 @@
 {
   "schemaVersion": 1,
-  "id": "vanilla-hammers",
-  "version": "1.6.2",
+  "id": "vanillaecxavators",
+  "version": "1.0.0",
 
-  "name": "Vanilla Hammers",
-  "description": "Adds a ton of new hammers to the game!",
+  "name": "Vanilla Excavators",
+  "description": "Shovel alternative to Vanilla Hammers!",
   "authors": [
     "Draylar"
   ],
 
   "license": "GPLv3",
-  "icon": "assets/vanilla-hammers/icon.png",
+  "icon": "assets/vanillaexcavators/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.draylar.vh.VanillaHammers"
+      "com.github.draylar.ve.VanillaExcavators"
     ],
     "modmenu": [
-      "com.github.draylar.vh.ModMenuIntegration"
+      "com.github.draylar.ve.ModMenuIntegration"
     ],
     "dynagear:equipment_types": [
-      "com.github.draylar.vh.compat.DynaGearCompat"
+      "com.github.draylar.ve.compat.DynaGearCompat"
     ]
   },
   "mixins": [
-    "vanillahammers.mixin.json"
+    "vanillaexcavators.mixin.json"
   ],
   "requires": {
     "fabricloader": "=>0.4.0",

@@ -5,8 +5,8 @@ plugins {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-archivesBaseName = "vanilla-hammers"
-version = "1.6.2"
+archivesBaseName = "vanillaexcavators"
+version = "1.0.0"
 
 minecraft {
 }

@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.github.draylar.ve.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ExcavatorKnockbackMixin"
+  ],
+  "client": [
+    "CancelExcavatorOutlineMixin",
+    "ExcavatorLargeOutlineMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
