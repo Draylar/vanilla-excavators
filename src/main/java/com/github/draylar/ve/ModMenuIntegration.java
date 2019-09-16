@@ -16,7 +16,7 @@ public class ModMenuIntegration implements ModMenuApi
     @Override
     public String getModId()
     {
-        return "vanilla-hammers";
+        return "vanillaexcavators";
     }
 
     @Override
