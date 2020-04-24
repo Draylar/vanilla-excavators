@@ -23,27 +23,29 @@ public class BlockBreaker {
     /**
      * Breaks blocks within the given radius on the axis the player is facing.
      * If the player is facing the X axis and the radius is 1, a 3x3 area will be destroyed on the X axis.
-     * @param world world the player is in
-     * @param playerEntity the player
-     * @param radius radius to break
+     *
+     * @param world          world the player is in
+     * @param playerEntity   the player
+     * @param radius         radius to break
      * @param breakValidator check to see if a block can be broken
      */
     public static void breakInRadius(World world, PlayerEntity playerEntity, int radius, BreakValidator breakValidator, boolean damageTool) {
-        if(!world.isClient) {
+        if (!world.isClient) {
             List<BlockPos> brokenBlocks = getBreakBlocks(world, playerEntity, radius);
-            for(BlockPos pos : brokenBlocks) {
+            for (BlockPos pos : brokenBlocks) {
                 BlockState state = world.getBlockState(pos);
-                if(breakValidator.canBreak(state)) {
+                if (breakValidator.canBreak(state)) {
                     world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 
-                    if(!playerEntity.isCreative()) {
+                    if (!playerEntity.isCreative()) {
                         BlockPos offsetPos = new BlockPos(pos.getX() + .5, pos.getY() + .5, pos.getZ() + .5);
                         dropItems(world, Block.getDroppedStacks(state, (ServerWorld) world, pos, null, playerEntity, playerEntity.getMainHandStack()), offsetPos);
                         state.onStacksDropped(world, pos, playerEntity.getMainHandStack());
                     }
 
                     if (damageTool) {
-                        playerEntity.inventory.getMainHandStack().damage(1, playerEntity, player -> { });
+                        playerEntity.inventory.getMainHandStack().damage(1, playerEntity, player -> {
+                        });
                     }
                 }
             }
@@ -51,7 +53,7 @@ public class BlockBreaker {
     }
 
     private static void dropItems(World world, List<ItemStack> stacks, BlockPos pos) {
-        for(ItemStack stack : stacks) {
+        for (ItemStack stack : stacks) {
             ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), stack);
             world.spawnEntity(itemEntity);
         }
@@ -60,9 +62,10 @@ public class BlockBreaker {
 
     /**
      * Returns a list of the blocks that would be broken in breakInRadius, but doesn't break them.
-     * @param world world of player
+     *
+     * @param world        world of player
      * @param playerEntity player breaking
-     * @param radius radisu to break in
+     * @param radius       radisu to break in
      * @return a list of blocks that would be broken with the given radius and tool
      */
     public static List<BlockPos> getBreakBlocks(World world, PlayerEntity playerEntity, int radius) {
@@ -78,9 +81,9 @@ public class BlockBreaker {
             Direction.Axis axis = blockHitResult.getSide().getAxis();
             ArrayList<BlockPos> positions = new ArrayList<>();
 
-            for(int x = -radius; x <= radius; x++) {
-                for(int y = -radius; y <= radius; y++) {
-                    for(int z = -radius; z <= radius; z++) {
+            for (int x = -radius; x <= radius; x++) {
+                for (int y = -radius; y <= radius; y++) {
+                    for (int z = -radius; z <= radius; z++) {
                         positions.add(new BlockPos(x, y, z));
                     }
                 }
@@ -88,21 +91,17 @@ public class BlockBreaker {
 
             BlockPos origin = blockHitResult.getBlockPos();
 
-            for(BlockPos pos : positions) {
-                if(axis == Direction.Axis.Y) {
-                    if(pos.getY() == 0) {
+            for (BlockPos pos : positions) {
+                if (axis == Direction.Axis.Y) {
+                    if (pos.getY() == 0) {
                         potentialBrokenBlocks.add(origin.add(pos));
                     }
-                }
-
-                else if (axis == Direction.Axis.X) {
-                    if(pos.getX() == 0) {
+                } else if (axis == Direction.Axis.X) {
+                    if (pos.getX() == 0) {
                         potentialBrokenBlocks.add(origin.add(pos));
                     }
-                }
-
-                else if (axis == Direction.Axis.Z) {
-                    if(pos.getZ() == 0) {
+                } else if (axis == Direction.Axis.Z) {
+                    if (pos.getZ() == 0) {
                         potentialBrokenBlocks.add(origin.add(pos));
                     }
                 }

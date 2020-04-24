@@ -6,7 +6,6 @@
     "ExcavatorKnockbackMixin"
   ],
   "client": [
-    "CancelExcavatorOutlineMixin",
     "ExcavatorLargeOutlineMixin"
   ],
   "injectors": {

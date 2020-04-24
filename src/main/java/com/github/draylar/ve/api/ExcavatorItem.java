@@ -1,31 +1,29 @@
 package com.github.draylar.ve.api;
 
 import com.github.draylar.ve.VanillaExcavators;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import java.util.Map;
 import java.util.Set;
 
-public class ExcavatorItem extends ShovelItem
-{
+public class ExcavatorItem extends ShovelItem {
+
     private static final Set<Block> EFFECTIVE_BLOCKS;
 
-    public ExcavatorItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed)
-    {
-        this(toolMaterial, attackDamage, attackSpeed, new Item.Settings().group(ItemGroup.TOOLS));
+    public ExcavatorItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed) {
+        this(toolMaterial, attackDamage, attackSpeed, new Item.Settings().group(VanillaExcavators.GROUP));
     }
 
-    public ExcavatorItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Item.Settings settings)
-    {
+    public ExcavatorItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Item.Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
@@ -54,7 +52,7 @@ public class ExcavatorItem extends ShovelItem
         }
 
         // center particle
-        if(world.isClient) {
+        if (world.isClient) {
             world.playLevelEvent(2001, blockPos, Block.getRawIdFromState(state));
         }
 

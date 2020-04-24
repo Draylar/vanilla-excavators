@@ -1,12 +1,13 @@
 plugins {
-	id 'fabric-loom' version '0.2.4-SNAPSHOT'
+	id 'fabric-loom' version '0.2.7-SNAPSHOT'
+	id 'maven-publish'
 }
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-archivesBaseName = "vanillaexcavators"
-version = "1.0.2"
+archivesBaseName = project.modid
+version = project.version
 
 minecraft {
 }
@@ -24,31 +25,74 @@ repositories {
 
 
 dependencies {
-	minecraft "com.mojang:minecraft:1.14.4"
-	mappings "net.fabricmc:yarn:1.14.4+build.5"
-	modApi "net.fabricmc:fabric-loader:0.4.8+build.159"
-	modApi "net.fabricmc.fabric-api:fabric-api:0.3.0+build.207"
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.minecraft_version}+build.${project.yarn_version}:v2"
+	modCompile "net.fabricmc:fabric-loader:${project.loader_version}"
+	modCompile "net.fabricmc.fabric-api:fabric-api:${project.api_version}"
 
 	// LibCD for conditional recipes
-	modApi 'io.github.cottonmc:LibCD:1.3.1+1.14.4'
-	include 'io.github.cottonmc:LibCD:1.3.1+1.14.4'
+	modCompile  "io.github.cottonmc:LibCD:${project.libcd_version}"
+	include "io.github.cottonmc:LibCD:${project.libcd_version}"
 
-	// auto config
-	modApi "me.sargunvohra.mcmods:auto-config:1.2.0+mc1.14.4"
-	include "me.sargunvohra.mcmods:auto-config:1.2.0+mc1.14.4"
+	// config
+	modCompile "me.shedaniel.cloth:config-2:${project.cloth_config_version}"
+	include "me.shedaniel.cloth:config-2:${project.cloth_config_version}"
+	modCompile "me.sargunvohra.mcmods:autoconfig1u:${project.auto_config_version}"
+	include "me.sargunvohra.mcmods:autoconfig1u:${project.auto_config_version}"
 
-	// cloth config
-	modApi 'me.shedaniel.cloth:config-2:0.5.2'
-	include 'me.shedaniel.cloth:config-2:0.5.2'
+	// dev modmenu
+	modCompile "io.github.prospector:modmenu:${project.mod_menu_version}"
+}
 
-	// DynaGear for hammers in more materials
-	modApi "io.github.cottonmc:DynaGear:1.2.0+1.14.3"
+processResources {
+	inputs.property "version", project.version
+
+	from(sourceSets.main.resources.srcDirs) {
+		include "fabric.mod.json"
+		expand "version": project.version
+	}
+
+	from(sourceSets.main.resources.srcDirs) {
+		exclude "fabric.mod.json"
+	}
+}
+
+// ensure that the encoding is set to UTF-8, no matter what the system default is
+// this fixes some edge cases with special characters not displaying correctly
+// see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
+tasks.withType(JavaCompile) {
+	options.encoding = "UTF-8"
 }
 
 // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
 // if it is present.
 // If you remove this task, sources will not be generated.
 task sourcesJar(type: Jar, dependsOn: classes) {
-	classifier = 'sources'
+	classifier = "sources"
 	from sourceSets.main.allSource
+}
+
+jar {
+	from "LICENSE"
+}
+
+// configure the maven publication
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			// add all the jars that should be included when publishing to maven
+			artifact(remapJar) {
+				builtBy remapJar
+			}
+			artifact(sourcesJar) {
+				builtBy remapSourcesJar
+			}
+		}
+	}
+
+	// select the repositories you want to publish to
+	repositories {
+		// uncomment to publish to the local maven
+		// mavenLocal()
+	}
 }
