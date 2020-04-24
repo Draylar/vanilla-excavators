@@ -27,6 +27,7 @@
   "text.autoconfig.vanillaexcavators.option.alwaysShowSingleBlockHitbox": "Always Show Single Hitbox",
   "text.autoconfig.vanillaexcavators.option.showSingleBlockWhenSneaking": "Single Hitbox When Sneaking",
   "text.autoconfig.vanillaexcavators.option.breakSingleBlockWhenSneaking": "Single Break When Sneaking",
+  "text.autoconfig.vanillaexcavators.option.durabilityModifier": "Hammer Durability Modifier",
   "text.autoconfig.vanillaexcavators.category.default": "General",
   "text.autoconfig.vanillaexcavators.title": "Vanilla Excavators Config",
 
