@@ -42,9 +42,9 @@ public class ExcavatorLargeOutlineMixin
         {
             if (!config.showSingleBlockWhenSneaking || !client.player.isSneaking())
             {
-                if (client.hitResult instanceof BlockHitResult)
+                if (client.crosshairTarget instanceof BlockHitResult)
                 {
-                    BlockHitResult hitResult = (BlockHitResult) client.hitResult;
+                    BlockHitResult hitResult = (BlockHitResult) client.crosshairTarget;
                     BlockPos blockPos_1 = hitResult.getBlockPos();
                     BlockState blockState_1 = client.world.getBlockState(blockPos_1);
 
