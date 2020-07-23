@@ -6,6 +6,7 @@
   "item.vanillaexcavators.iron_excavator": "Iron Excavator",
   "item.vanillaexcavators.golden_excavator": "Golden Excavator",
   "item.vanillaexcavators.diamond_excavator": "Diamond Excavator",
+  "item.vanillaexcavators.netherite_excavator": "Netherite Excavator",
   "item.vanillaexcavators.emerald_excavator": "Emerald Excavator",
   "item.vanillaexcavators.obsidian_excavator": "Obsidian Excavator",
   "item.vanillaexcavators.lapis_excavator": "Lapis Lazuli Excavator",
@@ -20,14 +21,8 @@
   "item.vanillaexcavators.glowstone_excavator": "Glowstone Excavator",
   "item.vanillaexcavators.nether_excavator": "Nether Excavator",
 
-  "text.autoconfig.vanillaexcavators.option.fullBlockHitbox": "Full Block Hitbox",
   "text.autoconfig.vanillaexcavators.option.enableExtraMaterials": "Extra Vanilla Material Excavators",
-  "text.autoconfig.vanillaexcavators.option.enableTaterHammer": "Tater Excavator",
-  "text.autoconfig.vanillaexcavators.option.enableFull3x3": "Full 3x3 Hitbox",
-  "text.autoconfig.vanillaexcavators.option.alwaysShowSingleBlockHitbox": "Always Show Single Hitbox",
-  "text.autoconfig.vanillaexcavators.option.showSingleBlockWhenSneaking": "Single Hitbox When Sneaking",
-  "text.autoconfig.vanillaexcavators.option.breakSingleBlockWhenSneaking": "Single Break When Sneaking",
-  "text.autoconfig.vanillaexcavators.option.durabilityModifier": "Hammer Durability Modifier",
+  "text.autoconfig.vanillaexcavators.option.durabilityModifier": "Excavator Durability Modifier",
   "text.autoconfig.vanillaexcavators.category.default": "General",
   "text.autoconfig.vanillaexcavators.title": "Vanilla Excavators Config",
 

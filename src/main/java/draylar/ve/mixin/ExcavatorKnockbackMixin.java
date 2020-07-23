@@ -1,6 +1,6 @@
-package com.github.draylar.ve.mixin;
+package draylar.ve.mixin;
 
-import com.github.draylar.ve.registry.Items;
+import draylar.ve.registry.Items;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;

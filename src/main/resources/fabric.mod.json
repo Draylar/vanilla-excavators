@@ -15,10 +15,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.draylar.ve.VanillaExcavators"
+      "draylar.ve.VanillaExcavators"
     ],
     "modmenu": [
-      "com.github.draylar.ve.ModMenuIntegration"
+      "draylar.ve.ModMenuIntegration"
     ]
   },
   "mixins": [

@@ -1,7 +1,7 @@
-package com.github.draylar.ve;
+package draylar.ve;
 
-import com.github.draylar.ve.config.VanillaExcavatorsConfig;
-import com.github.draylar.ve.registry.Items;
+import draylar.ve.config.VanillaExcavatorsConfig;
+import draylar.ve.registry.Items;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;

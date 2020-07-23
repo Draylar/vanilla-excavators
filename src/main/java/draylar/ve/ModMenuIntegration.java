@@ -1,6 +1,7 @@
-package com.github.draylar.ve;
+package draylar.ve;
 
-import com.github.draylar.ve.config.VanillaExcavatorsConfig;
+import draylar.ve.config.VanillaExcavatorsConfig;
+import io.github.prospector.modmenu.api.ConfigScreenFactory;
 import io.github.prospector.modmenu.api.ModMenuApi;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import net.fabricmc.api.EnvType;
@@ -13,12 +14,7 @@ import java.util.function.Function;
 public class ModMenuIntegration implements ModMenuApi {
 
     @Override
-    public String getModId() {
-        return "vanillaexcavators";
-    }
-
-    @Override
-    public Function<Screen, ? extends Screen> getConfigScreenFactory() {
+    public ConfigScreenFactory<?> getModConfigScreenFactory() {
         return screen -> AutoConfig.getConfigScreen(VanillaExcavatorsConfig.class, screen).get();
     }
 }
