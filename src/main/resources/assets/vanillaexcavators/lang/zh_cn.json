@@ -1,0 +1,30 @@
+{
+  "itemGroup.vanillaexcavators.group": "原版挖掘机",
+
+  "item.vanillaexcavators.wooden_excavator": "木挖掘机",
+  "item.vanillaexcavators.stone_excavator": "石挖掘机",
+  "item.vanillaexcavators.iron_excavator": "铁挖掘机",
+  "item.vanillaexcavators.golden_excavator": "金挖掘机",
+  "item.vanillaexcavators.diamond_excavator": "钻石挖掘机",
+  "item.vanillaexcavators.netherite_excavator": "下届合金挖掘机",
+  "item.vanillaexcavators.emerald_excavator": "绿宝石挖掘机",
+  "item.vanillaexcavators.obsidian_excavator": "黑曜石挖掘机",
+  "item.vanillaexcavators.lapis_excavator": "青金石挖掘机",
+  "item.vanillaexcavators.quartz_excavator": "石英挖掘机",
+  "item.vanillaexcavators.tater_excavator": "Lil Tater Excavator",
+  "item.vanillaexcavators.fiery_excavator": "岩浆挖掘机",
+  "item.vanillaexcavators.prismarine_excavator": "海晶石挖掘机",
+  "item.vanillaexcavators.slime_excavator": "粘液块挖掘机",
+  "item.vanillaexcavators.ender_excavator": "末地挖掘机",
+
+  "item.vanillaexcavators.vibranium_excavator": "Vibranium Excavator",
+  "item.vanillaexcavators.glowstone_excavator": "Glowstone Excavator",
+  "item.vanillaexcavators.nether_excavator": "Nether Excavator",
+
+  "text.autoconfig.vanillaexcavators.option.enableExtraMaterials": "额外的原版材质挖掘机",
+  "text.autoconfig.vanillaexcavators.option.durabilityModifier": "挖掘机耐久调节器",
+  "text.autoconfig.vanillaexcavators.category.default": "常规",
+  "text.autoconfig.vanillaexcavators.title": "原版挖掘机配置文件",
+
+  "item.vanillaexcavators.dynagear_excavator": "%s Excavator"
+}
