@@ -7,13 +7,12 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.tag.ItemTags;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Lazy;
 import net.minecraft.util.registry.Registry;
 
 import java.util.function.Supplier;
 
 public enum ExcavatorMaterials implements ToolMaterial {
-    WOOD(0, 59 * VanillaExcavators.CONFIG.durabilityModifier, 2.0F / 3.5f, 0.0f, 15, () -> {
+    WOOD(0, 59 * VanillaExcavators.CONFIG.durabilityModifier, 4.0F / 3.5f, 0.0f, 15, () -> {
         return Ingredient.fromTag(ItemTags.PLANKS);
     }),
     STONE(1, 131 * VanillaExcavators.CONFIG.durabilityModifier, 4.0F / 3.5f, 0.0f, 5, () -> {

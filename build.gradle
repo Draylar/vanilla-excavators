@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.4-SNAPSHOT'
+	id 'fabric-loom' version '0.5-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -27,8 +27,10 @@ dependencies {
 	modCompile "net.fabricmc.fabric-api:fabric-api:${project.api_version}"
 
 	// magna for excavators
-	modImplementation 'com.github.Draylar:magna:d5aebc1b1a'
-	include 'com.github.Draylar:magna:d5aebc1b1a'
+	modImplementation ("com.github.Draylar:magna:${project.magna_version}") {
+		exclude group: "net.fabricmc"
+	}
+	include "com.github.Draylar:magna:${project.magna_version}"
 
 	// dev modmenu
 	modCompile "io.github.prospector:modmenu:${project.mod_menu_version}"

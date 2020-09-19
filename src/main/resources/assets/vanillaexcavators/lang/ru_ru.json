@@ -1,0 +1,30 @@
+{
+  "itemGroup.vanillaexcavators.group": "Vanilla Excavators",
+
+  "item.vanillaexcavators.wooden_excavator": "Деревяный Экскаватор",
+  "item.vanillaexcavators.stone_excavator": "Каменый Экскаватор",
+  "item.vanillaexcavators.iron_excavator": "Железный Экскаватор",
+  "item.vanillaexcavators.golden_excavator": "Золотой Экскаватор",
+  "item.vanillaexcavators.diamond_excavator": "Алмазный Экскаватор",
+  "item.vanillaexcavators.netherite_excavator": "Незеритовый Экскаватор",
+  "item.vanillaexcavators.emerald_excavator": "Изумрудный Экскаватор",
+  "item.vanillaexcavators.obsidian_excavator": "Обсиантовый Экскаватор",
+  "item.vanillaexcavators.lapis_excavator": "Лазуритой Экскаватор",
+  "item.vanillaexcavators.quartz_excavator": "Кваревый Экскаватор",
+  "item.vanillaexcavators.tater_excavator": "Lil Tater Экскаватор",
+  "item.vanillaexcavators.fiery_excavator": "Пылаюший Экскаватор",
+  "item.vanillaexcavators.prismarine_excavator": "Призмариновый Экскаватор",
+  "item.vanillaexcavators.slime_excavator": "Слизневый Экскаватор",
+  "item.vanillaexcavators.ender_excavator": "Экскаватор Края",
+
+  "item.vanillaexcavators.vibranium_excavator": "Вибраниум Экскаватор",
+  "item.vanillaexcavators.glowstone_excavator": "Экскаватор из Светопыли",
+  "item.vanillaexcavators.nether_excavator": "Адскмй Экскаватор",
+
+  "text.autoconfig.vanillaexcavators.option.enableExtraMaterials": "Extra Vanilla Material Excavators",
+  "text.autoconfig.vanillaexcavators.option.durabilityModifier": "Экскаватор Durability Modifier",
+  "text.autoconfig.vanillaexcavators.category.default": "General",
+  "text.autoconfig.vanillaexcavators.title": "Vanilla Excavators Config",
+
+  "item.vanillaexcavators.dynagear_excavator": "%s Экскаватор"
+}
