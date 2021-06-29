@@ -6,7 +6,7 @@
   "item.vanillaexcavators.iron_excavator": "铁铲",
   "item.vanillaexcavators.golden_excavator": "金铲",
   "item.vanillaexcavators.diamond_excavator": "钻石铲",
-  "item.vanillaexcavators.netherite_excavator": "下届合金铲",
+  "item.vanillaexcavators.netherite_excavator": "下界合金铲",
   "item.vanillaexcavators.emerald_excavator": "绿宝石铲",
   "item.vanillaexcavators.obsidian_excavator": "黑曜石铲",
   "item.vanillaexcavators.lapis_excavator": "青金石铲",
@@ -18,7 +18,7 @@
   "item.vanillaexcavators.ender_excavator": "末影铲",
 
   "item.vanillaexcavators.vibranium_excavator": "振金铲",
-  "item.vanillaexcavators.glowstone_excavator": "萤石铲",
+  "item.vanillaexcavators.glowstone_excavator": "荧石铲",
   "item.vanillaexcavators.nether_excavator": "下界铲",
 
   "text.autoconfig.vanillaexcavators.option.enableExtraMaterials": "额外原版材质铲子",
