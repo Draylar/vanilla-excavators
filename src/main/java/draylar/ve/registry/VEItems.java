@@ -2,17 +2,15 @@ package draylar.ve.registry;
 
 import draylar.magna.item.ExcavatorItem;
 import draylar.ve.VanillaExcavators;
-import draylar.ve.config.VanillaExcavatorsConfig;
 import draylar.ve.item.FieryExcavatorItem;
 import draylar.ve.material.ExcavatorMaterials;
-import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class Items {
+public class VEItems {
 
     public static ExcavatorItem WOOD;
     public static ExcavatorItem SLIME;
@@ -25,7 +23,7 @@ public class Items {
         register(ExcavatorMaterials.DIAMOND, 5, -3f, "diamond");
         register(ExcavatorMaterials.NETHERITE, 6, -3.1f, "netherite");
 
-        if (AutoConfig.getConfigHolder(VanillaExcavatorsConfig.class).getConfig().enableExtraMaterials) {
+        if (VanillaExcavators.CONFIG.enableExtraMaterials) {
             register(ExcavatorMaterials.EMERALD, 5, -3f, "emerald");
             register(ExcavatorMaterials.OBSIDIAN, 3, -3.5f, "obsidian");
             register(ExcavatorMaterials.QUARTZ, 2, -2f, "lapis");

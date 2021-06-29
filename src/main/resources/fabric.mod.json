@@ -9,16 +9,13 @@
     "Draylar"
   ],
 
-  "license": "GPLv3",
+  "license": "MIT",
   "icon": "assets/vanillaexcavators/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "draylar.ve.VanillaExcavators"
-    ],
-    "modmenu": [
-      "draylar.ve.ModMenuIntegration"
     ]
   },
   "mixins": [

@@ -1,11 +1,15 @@
 package draylar.ve.config;
 
 
-import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
+import draylar.omegaconfig.api.Config;
 
-@Config(name = "vanillaexcavators")
-public class VanillaExcavatorsConfig implements ConfigData {
+public class VanillaExcavatorsConfig implements Config {
+
     public boolean enableExtraMaterials = true;
     public int durabilityModifier = 5;
+
+    @Override
+    public String getName() {
+        return "vanillaexcavators";
+    }
 }

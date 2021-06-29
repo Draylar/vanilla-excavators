@@ -1,6 +1,6 @@
 package draylar.ve.mixin;
 
-import draylar.ve.registry.Items;
+import draylar.ve.registry.VEItems;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,7 +15,7 @@ public class ExcavatorKnockbackMixin {
 
     @Inject(at = @At("HEAD"), method = "getKnockback", cancellable = true)
     private static void getKnockback(LivingEntity livingEntity, CallbackInfoReturnable<Integer> info) {
-        if (livingEntity.getMainHandStack().getItem().equals(Items.SLIME)) {
+        if (livingEntity.getMainHandStack().getItem().equals(VEItems.SLIME)) {
             info.setReturnValue(SLIME_KNOCKBACK_MODIFIER);
             info.cancel();
         }
