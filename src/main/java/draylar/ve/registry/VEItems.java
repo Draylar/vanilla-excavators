@@ -11,17 +11,15 @@ import net.minecraft.util.registry.Registry;
 
 public class VEItems {
 
-    public static ExcavatorItem WOOD;
+    public static ExcavatorItem WOOD = register(ExcavatorMaterials.WOOD, 0, -2.5f, "wooden");
+    public static ExcavatorItem STONE = register(ExcavatorMaterials.STONE, 1, -2.6f, "stone");
+    public static ExcavatorItem IRON = register(ExcavatorMaterials.IRON, 2, -2.8f, "iron");
+    public static ExcavatorItem GOLD = register(ExcavatorMaterials.GOLD, 2, -2.5f, "golden");
+    public static ExcavatorItem DIAMOND = register(ExcavatorMaterials.DIAMOND, 5, -3f, "diamond");
+    public static ExcavatorItem NETHERITE = registerFireproof(ExcavatorMaterials.NETHERITE, 6, -3.1f, "netherite");
     public static ExcavatorItem SLIME;
 
     public static void registerExcavators() {
-        WOOD = register(ExcavatorMaterials.WOOD, 0, -2.5f, "wooden");
-        register(ExcavatorMaterials.STONE, 1, -2.6f, "stone");
-        register(ExcavatorMaterials.IRON, 2, -2.8f, "iron");
-        register(ExcavatorMaterials.GOLD, 2, -2.5f, "golden");
-        register(ExcavatorMaterials.DIAMOND, 5, -3f, "diamond");
-        registerFireproof(ExcavatorMaterials.NETHERITE, 6, -3.1f, "netherite");
-
         if (VanillaExcavators.CONFIG.enableExtraMaterials) {
             register(ExcavatorMaterials.EMERALD, 5, -3f, "emerald");
             register(ExcavatorMaterials.OBSIDIAN, 3, -3.5f, "obsidian");
