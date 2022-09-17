@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "vanillaexcavators",
-  "version": "1.1.0",
+  "version": "1.1.1-rc3",
 
   "name": "Vanilla Excavators",
   "description": "Shovel alternative to Vanilla Hammers!",
@@ -22,7 +22,7 @@
     "vanillaexcavators.mixin.json"
   ],
   "depends": {
-    "fabricloader": ">=0.7.4",
+    "fabricloader": ">=0.14.9",
     "fabric": "*"
   }
 }
